@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.com.xgit.platform:hcloud-common:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/hcloud-common/1.0-SNAPSHOT/hcloud-common-1.0-20191008.083924-44.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/hcloud-common/1.0-SNAPSHOT/hcloud-common-1.0-20191008.083924-44-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/hcloud-common/1.0-SNAPSHOT/hcloud-common-1.0-20191008.083924-44-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

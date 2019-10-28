@@ -1,0 +1,127 @@
+server:
+  port: 9008
+
+spring:
+  datasource:
+    driverClassName: oracle.jdbc.OracleDriver
+    initial-size: 1
+    max-active: 1000
+    min-idle: 1
+    password: xgbj
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:oracle:thin:@10.100.2.110:1521:orcl
+    username: xgbj
+  flyway:
+    enabled: false
+    ignore-missing-migrations: true     #忽略缺失的升级脚本验证
+    baseline-on-migrate: true           #非初始化项目时加入flyway 数据库已有表且无 schema history table
+  security:
+    user:
+      name: admin
+      password: 123456
+  cache:
+    type: REDIS
+    cache-names: partsBack
+    redis:
+      key-prefix: "${spring.application.name}:"
+      cache-null-values: true
+      time-to-live: 10s
+  mvc:
+    servlet:
+      load-on-startup: 1
+#    date-format: yyyy-MM-dd HH:mm:ss
+
+hcloud:
+  oauth2:
+    jwt:
+      key-value: hcloud
+  security:
+    permitAll:
+      - /actuator/**
+      - /**
+    authenticated:
+      - /test/**
+  mybatis:
+    mapper-scan: cn.com.xgit.**.mapper
+
+
+  basic:
+    serviceId: hcloud-basic
+#mybatis-plus:
+#  mapper-locations: classpath:/mybatis/mysql-mapper/*/*Mapper.xml
+#  #实体扫描，多个package用逗号或者分号分隔
+#  typeAliasesPackage: cn.com.xgit.parts.rm.module.**.entity.**
+#  configuration:
+#    map-underscore-to-camel-case: true
+#    #    cache-enabled: true #配置的缓存的全局开关
+#  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句,调试用
+#  global-config:
+#    refresh: true
+
+mybatis-plus:
+  configuration:
+    cache-enabled: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    #加入mybatis xml热加载 修改sql不用重启 非开发环境 必须关闭
+    refresh: true
+    db-config:
+      column-underline: true
+      id-type: AUTO
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  mapper-locations: classpath:/mybatis/oracle-mapper/**/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: cn.com.xgit.parts.rm.module.*.entity
+
+feign:
+  hystrix:
+    enabled: true   #默认为false
+  okhttp:
+    enabled: true
+
+ribbon:
+  okhttp:
+    enabled: true
+    eager-load:
+      enabled: true
+      clients: hcloud-user
+  ReadTimeout: 6000
+  ConnectTimeout: 6000
+  MaxAutoRetries: 0
+  ServerListRefreshInterval: 5000
+
+hystrix:
+  propagate:
+    request-attribute:
+      enabled: true
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 24000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+logging:
+  file: ${LOG_TEMP:./logs}/${spring.application.name}.log     #不加这个，monitor不显示日志
+  config: classpath:logback/logback-spring.xml
+
+tx-lcn:
+  logger:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    enabled: ${TX_LCN_LOGGER_ENABLED:true}
+    jdbc-url: ${TX_LCN_LOGGER_JDBC_URL:jdbc:mysql://10.100.2.119:3306/hcloud-tx-manager?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=false}
+    username: root
+    password: xgit123

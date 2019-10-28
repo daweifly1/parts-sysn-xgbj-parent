@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.com.xgit.platform.boot:hcloud-job-spring-boot-starter:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/boot/hcloud-job-spring-boot-starter/1.0-SNAPSHOT/hcloud-job-spring-boot-starter-1.0-20191021.093014-5.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/boot/hcloud-job-spring-boot-starter/1.0-SNAPSHOT/hcloud-job-spring-boot-starter-1.0-20191021.093014-5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/boot/hcloud-job-spring-boot-starter/1.0-SNAPSHOT/hcloud-job-spring-boot-starter-1.0-20191021.093014-5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

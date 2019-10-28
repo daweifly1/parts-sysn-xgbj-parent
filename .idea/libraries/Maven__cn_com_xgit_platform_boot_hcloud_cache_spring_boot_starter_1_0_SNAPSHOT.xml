@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.com.xgit.platform.boot:hcloud-cache-spring-boot-starter:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/boot/hcloud-cache-spring-boot-starter/1.0-SNAPSHOT/hcloud-cache-spring-boot-starter-1.0-20191014.032016-14.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/boot/hcloud-cache-spring-boot-starter/1.0-SNAPSHOT/hcloud-cache-spring-boot-starter-1.0-20191014.032016-14-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/boot/hcloud-cache-spring-boot-starter/1.0-SNAPSHOT/hcloud-cache-spring-boot-starter-1.0-20191014.032016-14-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.com.xgit.platform:hcloud-security-core:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/hcloud-security-core/1.0-SNAPSHOT/hcloud-security-core-1.0-20190911.041735-7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/hcloud-security-core/1.0-SNAPSHOT/hcloud-security-core-1.0-20190911.041735-7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/com/xgit/platform/hcloud-security-core/1.0-SNAPSHOT/hcloud-security-core-1.0-20190911.041735-7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

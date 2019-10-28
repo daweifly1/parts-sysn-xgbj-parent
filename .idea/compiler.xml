@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="parts-sysn-xgbj-api" />
+        <module name="parts-sysn-xgbj" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="parts-sysn-xgbj" target="1.8" />
+      <module name="parts-sysn-xgbj-api" target="1.8" />
+      <module name="parts-sysn-xgbj-parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="parts-sysn-xgbj" options="-parameters" />
+      <module name="parts-sysn-xgbj-api" options="-parameters" />
+    </option>
+  </component>
+</project>

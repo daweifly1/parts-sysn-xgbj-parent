@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: parts-sysn-xgbj
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_DISCOVERY_ADDRESS:${NACOS_HOST:nacos.dev.xgit.com.cn}:${NACOS_PORT:80}}
+        cluster-name: ${NACOS_DISCOVERY_CLUSTER:}
+        namespace: ${NACOS_DISCOVERY_NAMESPACE:}
+        secure: ${NACOS_DISCOVERY_SECURE:false}
+        accessKey: ${NACOS_DISCOVERY_ACCESSKEY:}
+        secretKey: ${NACOS_DISCOVERY_SECRETKEY:}
+        heart-beat-interval: ${NACOS_DISCOVERY_HEART_BEAT:}
+        heart-beat-timeout: ${NACOS_DISCOVERY_HEART_TIMEOUT:}
+        ip-delete-timeout: ${NACOS_DISCOVERY_IP_DELETE:}
+      config:
+        server-addr: ${NACOS_CONFIG_ADDRESS:${spring.cloud.nacos.discovery.server-addr:}}
+        cluster-name: ${NACOS_CONFIG_CLUSTER:${spring.cloud.nacos.discovery.cluster-name:}}
+        namespace: ${NACOS_CONFIG_NAMESPACE:${spring.cloud.nacos.discovery.namespace:}}
+        group: ${NACOS_CONFIG_GROUP:DEFAULT_GROUP}
+        prefix: ${NACOS_CONFIG_PREFIX:${spring.application.name:}}
+        file-extension: ${NACOS_CONFIG_FILE_EXT:yml}
+        shared-dataids: ${NACOS_CONFIG_SHARED_DATAIDS:${REDIS:redis.yml},${SWAGGER:swagger.yml},${XXL_JOB:xxl-job.yml}}
+        refreshable-dataids: ${NACOS_CONFIG_REFRESHABLE_DATAIDS:${spring.cloud.nacos.config.shared-dataids:}}
+  security:
+    user:
+      name: ${MONITOR_USERNAME:${EUREKA_USER:admin}}
+      password: ${MONITOR_PASSWORD:${EUREKA_PASSWORD:123456}}
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+  main:
+    allow-bean-definition-overriding: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+

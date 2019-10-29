@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.com.xgit.parts.rm.module.warehouse.mapper.WarehouseAreaMapper">
+    <resultMap id="BaseResultMap" type="cn.com.xgit.parts.rm.module.warehouse.entity.WarehouseArea">
+        <id column="ID" property="id" jdbcType="VARCHAR"/>
+        <result column="ATTR_DESC" property="attrDesc" jdbcType="VARCHAR"/>
+        <result column="SAP_CODE" property="sapCode" jdbcType="VARCHAR"/>
+        <result column="ORG_ID" property="orgId" jdbcType="VARCHAR"/>
+        <result column="IS_DIRECT" property="isDirect" jdbcType="DECIMAL"/>
+        <result column="ID" property="id" jdbcType="VARCHAR"/>
+        <result column="AREA_CODE" property="areaCode" jdbcType="VARCHAR"/>
+        <result column="WAREHOUSE_ID" property="warehouseId" jdbcType="VARCHAR"/>
+        <result column="DESCRIPTION" property="description" jdbcType="VARCHAR"/>
+        <result column="ATTR_ID" property="attrId" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,ATTR_DESC,SAP_CODE,ORG_ID,IS_DIRECT,ID,AREA_CODE,WAREHOUSE_ID,DESCRIPTION,ATTR_ID
+    </sql>
+
+</mapper>

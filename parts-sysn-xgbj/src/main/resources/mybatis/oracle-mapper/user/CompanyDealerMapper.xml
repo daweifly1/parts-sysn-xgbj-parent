@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.com.xgit.parts.rm.module.customer.mapper.CompanyDealerMapper">
+    <resultMap id="BaseResultMap" type="cn.com.xgit.parts.rm.module.customer.entity.CompanyDealer">
+        <result column="ID" property="id" jdbcType="DECIMAL"/>
+        <result column="ORG_ID" property="orgId" jdbcType="VARCHAR"/>
+        <result column="DEALER_ORG_ID" property="dealerOrgId" jdbcType="VARCHAR"/>
+        <result column="DEALER_CODE" property="dealerCode" jdbcType="VARCHAR"/>
+        <result column="COMPANY_NAME" property="companyName" jdbcType="VARCHAR"/>
+        <result column="SHORT_NAME" property="shortName" jdbcType="VARCHAR"/>
+        <result column="ADDRESS" property="address" jdbcType="VARCHAR"/>
+        <result column="ZIP" property="zip" jdbcType="VARCHAR"/>
+        <result column="FAX" property="fax" jdbcType="VARCHAR"/>
+        <result column="CONTACT" property="contact" jdbcType="VARCHAR"/>
+        <result column="CONTACT_TEL" property="contactTel" jdbcType="VARCHAR"/>
+        <result column="DEALER_CLASS_ID" property="dealerClassId" jdbcType="DECIMAL"/>
+        <result column="IS_PLAT_COMPANY" property="isPlatCompany" jdbcType="DECIMAL"/>
+        <result column="PLAT_ORG_ID" property="platOrgId" jdbcType="VARCHAR"/>
+        <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="CREATE_ID" property="createId" jdbcType="VARCHAR"/>
+        <result column="UPDATE_DATE" property="updateDate" jdbcType="TIMESTAMP"/>
+        <result column="UPDATE_ID" property="updateId" jdbcType="VARCHAR"/>
+        <result column="IS_DEL" property="isDel" jdbcType="DECIMAL"/>
+        <result column="DEPARTEMNT_ID" property="departemntId" jdbcType="VARCHAR"/>
+        <result column="OWER_ID" property="owerId" jdbcType="VARCHAR"/>
+        <result column="APPLY_STATUS" property="applyStatus" jdbcType="DECIMAL"/>
+        <result column="CUSTOMER_GROUP" property="customerGroup" jdbcType="VARCHAR"/>
+        <result column="PRICE_GROUP" property="priceGroup" jdbcType="VARCHAR"/>
+        <result column="SALE_GROUP" property="saleGroup" jdbcType="VARCHAR"/>
+        <result column="SALE_DEPT" property="saleDept" jdbcType="VARCHAR"/>
+        <result column="IS_STORAGE" property="isStorage" jdbcType="DECIMAL"/>
+        <result column="TOTAL_LIMIT" property="totalLimit" jdbcType="DECIMAL"/>
+        <result column="USED_LIMIT" property="usedLimit" jdbcType="DECIMAL"/>
+        <result column="ENABLE_LIMIT" property="enableLimit" jdbcType="DECIMAL"/>
+        <result column="IS_DIRECT" property="isDirect" jdbcType="DECIMAL"/>
+        <result column="DIRECT_LIMIT" property="directLimit" jdbcType="DECIMAL"/>
+        <result column="DEALER_LEVEL_ID" property="dealerLevelId" jdbcType="VARCHAR"/>
+        <result column="DEALER_LEVEL_NAME" property="dealerLevelName" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,ID,ORG_ID,DEALER_ORG_ID,DEALER_CODE,COMPANY_NAME,SHORT_NAME,ADDRESS,ZIP,FAX,CONTACT,
+        CONTACT_TEL,DEALER_CLASS_ID,IS_PLAT_COMPANY,PLAT_ORG_ID,CREATE_DATE,CREATE_ID,UPDATE_DATE,UPDATE_ID,IS_DEL,DEPARTEMNT_ID,
+        OWER_ID,APPLY_STATUS,CUSTOMER_GROUP,PRICE_GROUP,SALE_GROUP,SALE_DEPT,IS_STORAGE,TOTAL_LIMIT,USED_LIMIT,ENABLE_LIMIT,
+        IS_DIRECT,DIRECT_LIMIT,DEALER_LEVEL_ID,DEALER_LEVEL_NAME
+    </sql>
+
+</mapper>

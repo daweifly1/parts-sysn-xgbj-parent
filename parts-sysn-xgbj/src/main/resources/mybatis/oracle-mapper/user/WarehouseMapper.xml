@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.com.xgit.parts.rm.module.warehouse.mapper.WarehouseMapper">
+    <resultMap id="BaseResultMap" type="cn.com.xgit.parts.rm.module.warehouse.entity.Warehouse">
+        <result column="ID" property="id" jdbcType="VARCHAR"/>
+        <result column="WAREHOUSE_CODE" property="warehouseCode" jdbcType="VARCHAR"/>
+        <result column="ERP_WAREHOUSE_CODE" property="erpWarehouseCode" jdbcType="VARCHAR"/>
+        <result column="ORG_ID" property="orgId" jdbcType="VARCHAR"/>
+        <result column="KEEPER_ID" property="keeperId" jdbcType="VARCHAR"/>
+        <result column="DESCRIPTION" property="description" jdbcType="VARCHAR"/>
+        <result column="IS_PLAN" property="isPlan" jdbcType="DECIMAL"/>
+        <result column="IS_CENTER" property="isCenter" jdbcType="DECIMAL"/>
+        <result column="FIRST_IN_OUT" property="firstInOut" jdbcType="DECIMAL"/>
+        <result column="IS_BAR_CODE" property="isBarCode" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,WAREHOUSE_CODE,ERP_WAREHOUSE_CODE,ORG_ID,KEEPER_ID,DESCRIPTION,IS_PLAN,IS_CENTER,FIRST_IN_OUTIS_BAR_CODE
+    </sql>
+
+</mapper>
